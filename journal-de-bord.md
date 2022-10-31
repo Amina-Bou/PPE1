@@ -12,3 +12,6 @@ Inspirées par le contexte social actuel nous avons finalement choisi le mot : g
 
 ### 17/10/2022
 J'ai commencé le corpus d'url sur le mot grève pour l'anglais. 
+
+### Exercices diapo shell
+Je n'arrive pas à comprendre ni à faire l'exercice 1 et 2 du diapo 32
