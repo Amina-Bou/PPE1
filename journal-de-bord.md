@@ -14,4 +14,5 @@ Inspirées par le contexte social actuel nous avons finalement choisi le mot : g
 J'ai commencé le corpus d'url sur le mot grève pour l'anglais. 
 
 Exercice fiche 2
+## Ajout section séance 3
 
