@@ -16,13 +16,40 @@ fichier_tableau=$2 # le fichier HTML en sortie
 # ici on doit vérifier que nos deux paramètres existent, sinon on ferme!
 # !!!!!!
 
-# modifier la ligne suivante pour créer effectivement du HTML
-echo "Je dois devenir du code HTML à partir de la question 3" > $fichier_tableau
+if [ $# -ne 2 ]
+then 
+	echo "ce programme demande deux argument"
+	exit
+fi
 
+
+#header=$(curl -I $fichier_urls | grep HTTP | grep -o -P "\b[0-9]{3}\b")
+
+echo "
+<html> 
+    <header> 
+        <meta charset="UTF-8" />
+    </header>
+    <table>
+        <tr> <th> numéro de ligne </th> <th> code de retour </th><th> URL </th> </tr>
+        <tr></tr>" > $fichier_tableau
+        
 lineno=1;
 
 while read -r line;
 do
-	echo "ligne $lineno: $line";
+	header=$(curl -I $line | grep HTTP | grep -o -P "\b[0-9]{3}\b")
+	URL=$line
+	echo      "<tr><td>$lineno</td><td>$header</td><td>$URL</td></tr>" >> $fichier_tableau
 	lineno=$((lineno+1));
 done < $fichier_urls
+
+
+# modifier la ligne suivante pour créer effectivement du HTML
+
+
+ echo "      
+    </table>
+</html>	" 	>> $fichier_tableau
+
+
