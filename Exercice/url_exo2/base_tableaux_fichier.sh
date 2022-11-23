@@ -31,6 +31,7 @@ echo "<tr><th>ligne</th><th>code</th><th>URL</th><th>encodage</th></tr>" >> $fic
 
 lineno=1;
 while read -r URL; do
+	curl $URL > "aspirations/$basename-$lineno.html"
 	echo -e "\tURL : $URL";
 	# la façon attendue, sans l'option -w de cURL
 	code=$(curl -ILs $URL | grep -e "^HTTP/" | grep -Eo "[0-9]{3}" | tail -n 1)
@@ -55,13 +56,14 @@ while read -r URL; do
 		dump=$(lynx -dump -nolist -assume_charset=$charset -display_charset=$charset $URL)
 		if [[ $charset -ne "UTF-8" && -n "$dump" ]]
 		then
-			dump=$(echo $dump | iconv -f $charset -t UTF-8//IGNORE)
+			dump=$(echo $dump | iconv -f $charset -t UTF-8//IGNORE)	
 		fi
 	else
 		echo -e "\tcode différent de 200 utilisation d'un dump vide"
 		dump=""
 		charset=""
 	fi
+	echo "$dump" > "dumps-text/$basename-$lineno.txt"
 
 	echo "<tr><td>$lineno</td><td>$code</td><td><a href=\"$URL\">$URL</a></td><td>$charset</td></tr>" >> $fichier_tableau
 	echo -e "\t--------------------------------"
