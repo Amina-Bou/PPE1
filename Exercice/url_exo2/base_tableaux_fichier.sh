@@ -12,13 +12,13 @@
 fichier_urls=$1 # le fichier d'URL en entrée
 fichier_tableau=$2 # le fichier HTML en sortie
 
-if [[ $# -ne 2 ]]
+if [[ $# -ne 3 ]]
 then
-	echo "Ce programme demande exactement deux arguments."
+	echo "Ce programme demande exactement trois arguments."
 	exit
 fi
 
-mot="robot" # à modifier
+mot=$3 # à modifier -fait 
 
 echo $fichier_urls;
 basename=$(basename -s .txt $fichier_urls)
@@ -27,10 +27,11 @@ echo "<html><body>" > $fichier_tableau
 echo "<h2>Tableau $basename :</h2>" >> $fichier_tableau
 echo "<br/>" >> $fichier_tableau
 echo "<table>" >> $fichier_tableau
-echo "<tr><th>ligne</th><th>code</th><th>URL</th><th>encodage</th></tr>" >> $fichier_tableau
+echo "<tr><th>ligne</th><th>code</th><th>URL</th><th>encodage</th><th>dump_html</th><th>dump_text</th><th>occurrences</th><th>contextes</th><th>concordances</th></tr>" >> $fichier_tableau
 
 lineno=1;
 while read -r URL; do
+
 	curl $URL > "aspirations/$basename-$lineno.html"
 	echo -e "\tURL : $URL";
 	# la façon attendue, sans l'option -w de cURL
@@ -63,9 +64,20 @@ while read -r URL; do
 		dump=""
 		charset=""
 	fi
+	
+	# Compte des occurrences 
+	compte=$(echo $dump | grep -o -i -P "$mot" | wc -l)
+	
 	echo "$dump" > "dumps-text/$basename-$lineno.txt"
+	
+	# construction du contexte 
+	echo "$dump" | grep -P -A2 -B2 $mot  > "contextes/$basename-$lineno.txt"
+	
+	# construction des concordances
 
-	echo "<tr><td>$lineno</td><td>$code</td><td><a href=\"$URL\">$URL</a></td><td>$charset</td></tr>" >> $fichier_tableau
+ 	bash programmes/concordance.sh dumps-text/$basename-$lineno.txt $mot > ./concordances/$basename-$lineno.html
+
+	echo "<tr><td>$lineno</td><td>$code</td><td><a href=\"$URL\">$URL</a></td><td>$charset</td><td><a href="./aspirations/$basename-$lineno.html">html</a></td><td><a href="./dumps-text/$basename-$lineno.txt">text</a></td><td>$compte</td><td><a href="./contextes/$basename-$lineno.txt">contextes</a></td><td><a href="./concordances/$basename-$lineno.html">concordance</a></td></tr>" >> $fichier_tableau
 	echo -e "\t--------------------------------"
 	lineno=$((lineno+1));
 done < $fichier_urls
