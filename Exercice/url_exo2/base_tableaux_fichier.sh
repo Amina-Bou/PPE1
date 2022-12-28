@@ -23,7 +23,7 @@ mot=$3 # à modifier -fait
 echo $fichier_urls;
 basename=$(basename -s .txt $fichier_urls)
 
-echo "<html><link rel="stylesheet" href=".../style.css"><<body>" > $fichier_tableau
+echo "<html><link rel="stylesheet" href="../../../style.css"><<body>" > $fichier_tableau
 echo "<h2>Tableau $basename :</h2>" >> $fichier_tableau
 echo "<br/>" >> $fichier_tableau
 echo "<table class="greyGridTable">" >> $fichier_tableau
