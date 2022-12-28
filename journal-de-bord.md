@@ -40,3 +40,10 @@ Nous avons fait une visio avec les filles du groupes, nous avons discuté des pr
 
 ### 24/12
 Le 21 j'ai crée un menu horizontal en html. Aujourd'hui j'ai voulu l'améliorer et lui ajouter des options, comme des coleurs en plus, des effets lorsque la souris va sur le bouton. J'ai pu ainsi crée un menu horizontal déroulant avec les liens vers nos tableaux. Je pense ajouter des liens vers une page itrameur pour pouvoir faire l'analyse de nos mots (je ne sais pas encore si je vais faire un volet déroulant pour itrameur avec : Vietnamien, Français et Anglais ou si je fais juste une page avec les trois combinés, je demanderai l'avis du groupe). 
+
+### 27/12
+J'ai inclu un pied de page à la page web du groupe, j'ai effectué quelques modifications sur le menu déroulant (je voulais que celui-ci prenne toute la page et qu'il s'adapte si la page devient plus petite ou plus grande). Ensuite nous avons fait une visio avec Yaasmine, afin de se mettre d'accord sur la mise en page du contenu de la page web (police, couleur etc...). J'ai crée des blocs (avec un effet blur) avec des titres puis ajouté le contenu que Yaasmine a écrit (la présentation de la démarche et choix du mot) en y ajoutant des modifications. Puis yaasmine a repris la page pour faire des modifications de mise en page du texte. Pour les nuages de mot j'ai pensé à un masque en forme de mégaphone, pancarte et banderole.
+
+### 28/12
+J'ai crée un dossier page web dans le git du groupe afin d'y ajouter les pages web pour l'onglet : scripts, itrameur et nuage de mot. En créant une page html scripts, j'ai voulu rajouter le menu déroulant sauf que le lien vers le fichier css ne fonctionne pas même avec un chemin absolu... 
+Deuxième problème rencontré, je ne sais pas comment mettre des images qui sont téléchargées sur mon git pour les ajouter à un fichier html (je voulais faire ça pour itrameur, les nuages de mot, et même les scripts auxquels j'aurai par la suite ajouté des explications).
