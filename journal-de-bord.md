@@ -47,3 +47,7 @@ J'ai inclu un pied de page à la page web du groupe, j'ai effectué quelques mod
 ### 28/12
 J'ai crée un dossier page web dans le git du groupe afin d'y ajouter les pages web pour l'onglet : scripts, itrameur et nuage de mot. En créant une page html scripts, j'ai voulu rajouter le menu déroulant sauf que le lien vers le fichier css ne fonctionne pas même avec un chemin absolu... 
 Deuxième problème rencontré, je ne sais pas comment mettre des images qui sont téléchargées sur mon git pour les ajouter à un fichier html (je voulais faire ça pour itrameur, les nuages de mot, et même les scripts auxquels j'aurai par la suite ajouté des explications).
+
+### 29/12
+Il est impossible de push des images sur git. On a donc crée un dossier afin de mettre des images dessus. J'ai fait les nuages de mots pour l'anglais en forme de mégaphone et pour le français sous la forme d'une pancarte. J'ai ensuite mis ces images sur la page web "nuage de mots", j'ai corrigé les chemins pour aller d'une page à l'autre. 
+Je n'ai pas réussi à mettre le lien de mon fichier style.css (ni avec le chemin relatif ni absolu) dans une page du dossier "page web", j'ai donc copié ce fichier et l'ai mis dans le dossier page web. Nous avons à présent deux fichiers "style.css". 
