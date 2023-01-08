@@ -211,6 +211,7 @@ margin-left: 10px;
 .collumns{
     column-fill: balance;
     max-width: 100%;
+    flex-direction: row;
 
 }
 
