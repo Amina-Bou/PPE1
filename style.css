@@ -1,4 +1,3 @@
-	
 body{
     font-family: 'Droid Serif', serif;
     font-size: 14px;
@@ -271,7 +270,6 @@ p{
 				border-left: none;
       	border-bottom: 1px solid #2f2f2f;
 	}
-	
     header{
         max-width: 320px;
         font-size: 60px;
@@ -280,182 +278,78 @@ p{
     }
 
 
-.dropdownmenu {
-	background-color: #f9f7f1;
-	display: flex;
-	position: fixed;
-	margin:0 auto;
+
+#container {
+	margin: 0 auto;
 	width: 100%;
 	justify-content: space-around;
-	}
+}
 
-		
-.dropdownmenu ul {
-	display: none;
-	}
+p {
+	text-align: center;
+}
 
-.dropdownmenu,
-.dropdownmenu ul {
+                                         
+nav {
+	margin: 50px 0;
+	background-color:none;
+}
+
+nav ul {
+	padding: 0;
+  	margin: 0;
 	list-style: none;
-	margin: 0px;
-	padding: 0px;
+	position: relative;
 	}
 	
-.dropdownmenu a {
-	display: block;
-	min-width: 100px;
-	height: 45px;
-	line-height: 45px;
-	color: #000000;
+nav ul li {
+	display:inline-block;
 	background-color: #f9f7f1;
- 	text-align: center;
- 	text-decoration: none;
-	padding: 3px 10px;
-	transition: all 0.65s;
-	}
-	
-.dropdownmenu > li > a {
-	font-size: 24px;
-        font-weight: 700;
-        border-left: 2px solid #fff;
 	}
 
-.dropdownmenu,
-.dropdownmenu ul {
-	list-style: none;
-	margin: 0px;
-	padding: 0px;
-	}
+nav a {
+	display:block;
+	padding:0 10px;	
+	color:#2f2f2f;
+	font-size:20px;
+	line-height: 60px;
+	text-decoration:none;
+}
 
-        
-.dropdownmenu > li a:hover {
-	background-color: #ebe3cc;
-	}
-	
-.dropdownmenu li {
-	letter-spacing: 2.2px;
-	font-weight: 700;
-	}
-	
-.dropdownmenu li:hover ul {
-	display: block;
+nav a:hover { 
+	background-color: #ebe3cc; 
+}
+
+/* Dropdowns caché par défault */
+nav ul ul {
+	display: none;
 	position: absolute; 
-	top: 41px
-	left: 0px
-	z-index: 100;
-	}
+	top: 60px; /* la hauteur de la main nav */
+}
 	
-.dropdownmenu ul a:hover{
-	background-color: #ebe3cc;
-	}
+/* Afficher les listes déroulantes au survol */
+nav ul li:hover > ul {
+	display:inherit;
+}
+	
+/* Première partie Dropdown */
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+/* Seconde, troisième et autres parties	*/
+nav ul ul ul li {
+	position: relative;
+	top:-60px; 
+	left:170px;
+}
 
 	
-	
-.footer-basic {
-  padding:40px 0;
-  background-color:#282d32;;
-  color:#f0f9ff;
-}
-
-.footer-basic ul {
-  padding:0;
-  list-style:none;
-  text-align:center;
-  font-size:18px;
-  line-height:1.6;
-  margin-bottom:0;
-}
-
-.footer-basic li {
-  padding:0 10px;
-}
-
-.footer-basic ul a {
-  color:inherit;
-  text-decoration:none;
-  opacity:0.8;
-}
-
-.footer-basic ul a:hover {
-  opacity:1;
-}
-
-.footer-basic .social {
-  text-align:center;
-  padding-bottom:25px;
-}
-
-.footer-basic .social > a {
-  font-size:24px;
-  width:30px;
-  height:30px;
-  line-height:40px;
-  display:inline-block;
-  text-align:center;
-  border-radius:50%;
-  border:1px solid #ccc;
-  margin:0 18px;
-  color:inherit;
-  opacity:0.75;
-}
-
-.footer-basic .social > a:hover {
-  opacity:0.9;
-}
-
-.footer-basic .copyright {
-  margin-top:15px;
-  text-align:center;
-  font-size:13px;
-  color:#aaa;
-  margin-bottom:0;
-}
- 
-table.greyGridTable {
-  border: 2px solid #FFFFFF;
-  width: 100%;
-  text-align: center;
-  border-collapse: collapse;
-}
-table.greyGridTable td, table.greyGridTable th {
-  border: 1px solid #FFFFFF;
-  padding: 3px 4px;
-}
-table.greyGridTable tbody td {
-  font-size: 13px;
-}
-table.greyGridTable td:nth-child(even) {
-  background: #EBEBEB;
-}
-table.greyGridTable thead {
-  background: #FFFFFF;
-  border-bottom: 4px solid #333333;
-}
-table.greyGridTable thead th {
-  font-size: 15px;
-  font-weight: bold;
-  color: #333333;
-  text-align: center;
-  border-left: 2px solid #333333;
-}
-table.greyGridTable thead th:first-child {
-  border-left: none;
-}
-
-table.greyGridTable tfoot {
-  font-size: 14px;
-  font-weight: bold;
-  color: #333333;
-  border-top: 4px solid #333333;
-}
-table.greyGridTable tfoot td {
-  font-size: 14px;
-}
- 	
- 	
- 	
- 	
- 	
- 	
+/* Change ça si tu veux changer le symbole du dropdown */
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }
  	
 
