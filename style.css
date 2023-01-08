@@ -212,20 +212,19 @@ margin-left: 10px;
 
 }
 
+
 .collumn{
     font-size: 14px;
-	 display: inline-block;
-    line-height: 30px;
-	width: 17.5%;
-	max-width: 100%;
+    line-height: 20px;
+    width: 17.5%;
+    display: inline-block;
+    padding: 0 1% 0 1%;
     vertical-align: top;
     margin-bottom: 50px;
-	 padding: 0 1% 0 1%;
-	flex-direction: row;
     transition: all .7s;
-    
+}  
    
-}
+
 .collumn + .collumn { 
   border-left: 1px solid #2f2f2f;
 }
