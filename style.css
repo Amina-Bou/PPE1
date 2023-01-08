@@ -223,6 +223,8 @@ margin-left: 10px;
 	width: 100%;
     vertical-align: top;
     margin-bottom: 50px;
+	margin:0 auto;
+	 padding: 0 1% 0 1%;
 	flex-direction: row;
     transition: all .7s;
 
