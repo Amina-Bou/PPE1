@@ -51,3 +51,8 @@ Deuxième problème rencontré, je ne sais pas comment mettre des images qui son
 ### 29/12
 Il est possible de push des images sur git. Yaasmine a donc crée un dossier afin de mettre des images dessus. J'ai fait les nuages de mots pour l'anglais en forme de mégaphone et pour le français sous la forme d'une pancarte. J'ai ensuite mis ces images sur la page web "nuage de mots", j'ai corrigé les chemins pour aller d'une page à l'autre. 
 Je n'ai pas réussi à mettre le lien de mon fichier style.css (ni avec le chemin relatif ni absolu) dans une page du dossier "page web", j'ai donc copié ce fichier et l'ai mis dans le dossier page web. Nous avons à présent deux fichiers "style.css". 
+
+### semaine du 2 et 9 janvier 
+Nous avons changé la présentation du site web pour qu'il représente davantage un journal, je me suis occupée de décrire le script bash permettant de créer les tableaux, j'ai crée la page et la mise en page puis j'ai ajouté le contenu. J'ai fait le nuage de mot pour le vietnamien, j'ai aussi ajouté cette page. Enfin pour les tableaux j'ai directement ajouté le menu ainsi que le footer sur la page que le script tableau a permis de générer. 
+
+
